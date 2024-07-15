@@ -129,3 +129,36 @@ ChatGPT provided good code (it runs!) that:
 - export the classifier
   
 I’m not at all surprised that ChatGPT excels here since the code is pretty much only boilerplate code. This can be copied and pasted from the documentation as is.
+
+
+3. Tune Hyperparameter
+Prompt: I want you to act as a data scientist and code for me. I have trained a [model name]. Please write the code to tune the hyper parameters.
+
+![image](https://github.com/user-attachments/assets/8b28de02-ac02-40f4-8df6-b111e52f0b57)
+
+![image](https://github.com/user-attachments/assets/4199ec3c-4b3a-438e-acac-eef09b96508d)
+
+For a decision tree classifier, ChatGPT wrote code that:
+
+- performed a grid search
+- suggested the best parameters.
+
+Not bad at all, and the code runs! Grid search is the most popular method for hyperparameter tuning, so it’s no surprise that it came up on top.
+
+However, note that grid search goes through the search space exhaustively. The larger the search space, the longer time it will take. An alternative is the randomized search, which implements a randomized search over parameters. Once assigned a budget, randomized search takes the same amount of time regardless of the search space.
+
+4. Explore Data
+Prompt: I want you to act as a data scientist and code for me. I have a dataset of [describe dataset]. Please write code for data visualisation and exploration.
+
+![image](https://github.com/user-attachments/assets/4489fda7-c21a-4c84-9e5b-6f040fd22d8c)
+
+![image](https://github.com/user-attachments/assets/ebfab583-26e7-4316-bf5c-02e5a254f4ed)
+
+For an exploration, ChatGPT wrote code that:
+
+- used df.describe() to provide descriptive statistics
+- created count plots for visualizing the distribution of categorical variable
+- created a heatmap to determine the between numerical variables
+- determined the relationship of numerical variables and the target variable with box plots of numerical columns
+- determined the relationship of categorical variables and the target variable with barplot.
+- The above choices of charts are indeed correct.
