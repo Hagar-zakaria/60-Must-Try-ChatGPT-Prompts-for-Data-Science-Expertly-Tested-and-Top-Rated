@@ -88,3 +88,10 @@ I Rated 60 ChatGPT Functions for Data Science: Discover These Prompts to Have Ch
   - Summarize Book
   - Summarize Paper
   - Provide Emotional Support
+
+# WRITE PYTHON
+1. Train Classification Model
+Prompt: I want you to act as a data scientist and code for me. I have a dataset of [describe dataset]. Please build a machine learning model that predict [target variable].
+
+![image](https://github.com/user-attachments/assets/1ead387e-0030-422e-8681-a17371f256db)
+
