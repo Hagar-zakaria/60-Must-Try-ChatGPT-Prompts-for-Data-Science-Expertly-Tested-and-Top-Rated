@@ -93,5 +93,10 @@ I Rated 60 ChatGPT Functions for Data Science: Discover These Prompts to Have Ch
 1. Train Classification Model
 Prompt: I want you to act as a data scientist and code for me. I have a dataset of [describe dataset]. Please build a machine learning model that predict [target variable].
 
-![image](https://github.com/user-attachments/assets/1ead387e-0030-422e-8681-a17371f256db)
+![image](https://github.com/user-attachments/assets/3c032e58-2062-415a-b7df-6cbb85bab248)
 
+![image](https://github.com/user-attachments/assets/697cced4-39d8-434d-89a3-93b4abba7955)
+
+![image](https://github.com/user-attachments/assets/f59c9afb-aa5e-4473-aa16-6f900c6d3955)
+
+![image](https://github.com/user-attachments/assets/bbd7c341-7aca-48ab-bd23-ad1158b2bbac)
