@@ -131,7 +131,7 @@ ChatGPT provided good code (it runs!) that:
 I’m not at all surprised that ChatGPT excels here since the code is pretty much only boilerplate code. This can be copied and pasted from the documentation as is.
 
 
-3. Tune Hyperparameter
+## 3. Tune Hyperparameter
 Prompt: I want you to act as a data scientist and code for me. I have trained a [model name]. Please write the code to tune the hyper parameters.
 
 ![image](https://github.com/user-attachments/assets/8b28de02-ac02-40f4-8df6-b111e52f0b57)
@@ -147,7 +147,7 @@ Not bad at all, and the code runs! Grid search is the most popular method for hy
 
 However, note that grid search goes through the search space exhaustively. The larger the search space, the longer time it will take. An alternative is the randomized search, which implements a randomized search over parameters. Once assigned a budget, randomized search takes the same amount of time regardless of the search space.
 
-4. Explore Data
+## 4. Explore Data
 Prompt: I want you to act as a data scientist and code for me. I have a dataset of [describe dataset]. Please write code for data visualisation and exploration.
 
 ![image](https://github.com/user-attachments/assets/4489fda7-c21a-4c84-9e5b-6f040fd22d8c)
@@ -162,3 +162,48 @@ For an exploration, ChatGPT wrote code that:
 - determined the relationship of numerical variables and the target variable with box plots of numerical columns
 - determined the relationship of categorical variables and the target variable with barplot.
 - The above choices of charts are indeed correct.
+
+##  5. Generate Data
+
+Prompt: I want you to act as a fake data generator. I need a dataset that has x rows and y columns: [insert column names]
+
+![image](https://github.com/user-attachments/assets/b3030930-f8c1-40e9-bbdc-54cfe60302bb)
+
+![image](https://github.com/user-attachments/assets/b204a9b9-9b92-44b4-adc2-2958c8a44d98)
+
+
+ChatGPT produced code that generated the data as per my requirements completely. It only used the pandas library and the inhouse random library, making it portable. I actually did use the synthetic dataset for other tasks.
+
+## 6. Write Regex
+
+Prompt: I want you to act as a coder. Please write me a regex in Python that [describe regex]
+
+![image](https://github.com/user-attachments/assets/1ae156c0-6d47-4572-bb2c-88f8ce488a38)
+
+![image](https://github.com/user-attachments/assets/beba542c-31db-43ac-85de-2e9982fde829)
+
+This regex uses the following elements:
+
+- ^: This matches the start of the string.
+- [a-zA-Z0-9]: This matches any alphanumeric character.
+- .*: This matches any number of any characters (except a newline), including none.
+- data: This matches the string "data".
+- science: This matches the string "science".
+- !: This matches the exclamation point.
+- $: This matches the end of the string.
+
+Here, ChatGPT provided code that matched a regex as per requirements in Python.
+
+However, note that I have cherrypicked this example. Before this, I had tried asking ChatGPT to create more complex other regex patterns but it failed. It even sounded confident when it explained the regex, but the regex it produced didn’t work.
+
+
+7. Train Time Series
+Prompt: I want you to act as a data scientist and code for me. I have a time series dataset [describe dataset]. Please build a machine learning model that predict [target variable]. Please use [time range] as train and [time range] as validation.
+
+![image](https://github.com/user-attachments/assets/bff9d0b7-ae72-43a1-8c1f-d5da84de597f)
+
+![image](https://github.com/user-attachments/assets/61fc0ef9-6761-4da9-8e44-e155ab2df21b)
+
+![image](https://github.com/user-attachments/assets/fe687970-d98d-4141-b746-dd8602f38f56)
+
+![image](https://github.com/user-attachments/assets/ce495c7c-654a-4c1d-be28-76b030a7b23c)
