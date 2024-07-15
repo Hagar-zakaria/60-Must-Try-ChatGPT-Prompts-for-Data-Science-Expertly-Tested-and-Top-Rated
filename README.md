@@ -332,3 +332,145 @@ Prompt: I want you to act as a software developer. I would like to compare the e
 ChatGPT is able to write code that compares two function speeds with built-in packages.
 
 The code runs and is correct. Though, I would rather ChatGPT use the %%timeit magic in Python instead of writing verbose code.
+
+## 16. Create NumPy Array
+
+Prompt: I want you to act as a data scientist. I need to create a numpy array. This numpy array should have the shape of (x,y,z). Please initialize the numpy array with random values.
+
+![image](https://github.com/user-attachments/assets/f9aeb3a5-e706-4b00-87f9-6a93a596a289)
+
+
+This simple command results in a simple function. Here, ChatGPT demonstrated its ability to translate human language into an appropriate function and parameter.
+
+## 18. Validate Column
+
+Prompt: I want you to act as a data scientist. Please write code to test if that my pandas Dataframe [insert requirements here]
+
+![image](https://github.com/user-attachments/assets/3f9fd972-62f1-4eec-a624-98ba75748289)
+
+![image](https://github.com/user-attachments/assets/3730a1d4-cefc-48fd-9ef2-92f87df50dfe)
+
+![image](https://github.com/user-attachments/assets/cf0994d5-bcf5-4dc1-8c50-482178f4b7c4)
+
+# EXPLAIN CODE
+
+## 19. Explain Python
+
+Prompt: I want you to act as a code explainer. What is this code doing? [Insert code]
+
+![image](https://github.com/user-attachments/assets/746151c3-0720-42fa-8daa-c71cb1fe336c)
+
+I am extremely pleased with ChatGPT’s response with this. Not only is it able to explain concepts for each function. It is also able to guess why the programmer is performing a certain action. For example, it explained the line np.clip(reconstructed, 0, 1) by saying that “this is likely done to ensure that the values are within the valid range for pixel intensity value”, which is absolutely correct.
+
+ChatGPT’s ability to understand code is pretty good and robust, in my opinion. For that, I would strongly suggest any coders who face problems understanding a code use ChatGPT as a complement to the API’s documentation.
+
+
+## 20. Explain SQL
+
+Prompt: I want you to act as a data science instructor. Can you please explain to me what this SQL code is doing? [Insert SQL code]
+
+![image](https://github.com/user-attachments/assets/fe33aa01-9f90-458f-b5b6-579903cd4ac2)
+
+
+Again, a correct and an awesome explanation. Much like its explanations for Python, ChatGPT is able to understand and explain SQL code.
+
+I like its explanation of the line SUM(Revenue) OVER (ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW). Note that it’s not only able to provide a high level explanation of what the line is doing, but also provide a breakdown of what the OVER(),UNBOUNDED PRECEDING and CURRENT ROW clauses are doing.
+
+## 21. Explain Google Sheets Formula
+
+Prompt: I want you to act as a Google Sheets formula explainer. Explain the following Google Sheets command. [Insert formula]
+
+![image](https://github.com/user-attachments/assets/5ddfc11f-e881-48cd-ab35-5978d5a784c2)
+
+![image](https://github.com/user-attachments/assets/295f03c1-86b7-412a-87bd-d00059d37632)
+
+ChatGPT is able to explain the FILTER function well. I like that it provided the generalize code snippet like one would see in the documentation, and proceeded to explain the general snippet with the specific arguments provided by the users.
+
+In particular, the line the "Filter" function is being used to filter the range "C2:C12" based on the condition "A2:A12=F2" is an excellent explanation is contextualized to the user’s arguments.
+
+
+# OPTIMIZE CODE
+
+## 22. Improve Code Speed
+
+Prompt: I want you to act as a software developer. Please help me improve the time complexity of the code below. [Insert code]
+
+
+![image](https://github.com/user-attachments/assets/32dc0873-f2d7-442a-84f2-9c8e323d8894)
+
+
+A correct optimization made by ChatGPT from O(n) to O(1). However, note that this is a simple example. You might want to test it on more complex cases to see if this holds up.
+
+
+
+## 23. Optimize Pandas
+
+Prompt: I want you to act as a code optimizer. Can you point out what’s wrong with the following Pandas code and optimize it? [Insert code here]
+
+![image](https://github.com/user-attachments/assets/5a7e2d8c-909a-494c-a4da-cef1e24d3e51)
+
+![image](https://github.com/user-attachments/assets/3af3cbbf-16be-4de6-91ff-895a6b8d6605)
+
+I personally think these suggestions are particularly salient. It pointed out that there is nothing wrong with the code (a correct observation) and moved to to suggest good code practices.
+
+## 24. Optimize Pandas Again
+
+Prompt: I want you to act as a code optimizer. Can you point out what’s wrong with the following Pandas code and optimize it? [Insert code here]
+
+![image](https://github.com/user-attachments/assets/bc1115d9-a414-4e24-ab6c-afae0fe3687f)
+
+![image](https://github.com/user-attachments/assets/809c9636-d6f9-4e3f-a9de-52d48729ab98)
+
+Of course ChatGPT is able to catch iterrow as an anti-pattern in Pandas. Love this optimization.
+
+## 25. Optimize Python
+
+Prompt: I want you to act as a code optimizer. The code is poorly written. How do I correct it? [Insert code here]
+
+![image](https://github.com/user-attachments/assets/f8227158-3771-4377-abf9-a5ebe34e38bb)
+
+![image](https://github.com/user-attachments/assets/34573ed8-5b60-4094-a621-b3605b3ebb11)
+
+## 26. Optimize SQL
+
+Prompt: I want you to act as an SQL code optimizer. The following code is slow. Can you help me speed it up? [Insert SQL]
+
+![image](https://github.com/user-attachments/assets/864a1999-bfb7-478b-8921-e6789072d62b)
+
+The first two suggestions here are valid suggestions for optimization. Howeve, the third tip is incorrect. In fact, DATEPART is actually faster than EXTRACT. For that reason, I’ll have to dock stars off for this category.
+
+## 27. Simplify Python
+
+Prompt: I want you to act as a code simplifier. Can you simplify the following code?
+
+![image](https://github.com/user-attachments/assets/dcc2e5ab-23a0-44f1-b8f1-03af1aa534cb)
+
+If you’ve written spaghetti code in Python, ChatGPT might be able to help you simplify it.
+
+# FORMAT CODE
+
+## 28. Write Documentation
+
+Prompt: I want you to act as a software developer. Please provide documentation for func1 below. [Insert function]
+
+![image](https://github.com/user-attachments/assets/8a215cc0-9457-4870-934c-1db5c5e624b1)
+
+
+ChatGPT could provide a correct, nicely formatted docstring. It also provides a one-liner that captures the essence of the function (“calculates the sum of the integers”). This is neat and I foresee myself doing this a lot.
+
+# 29. Improve Readability
+
+Prompt: I want you to act as a code analyzer. Can you improve the following code for readability and maintainability? [Insert code]
+
+![image](https://github.com/user-attachments/assets/ee7c88cc-242a-488c-97e9-ab6d81c6c875)
+
+I am slightly disappointed here because I had hope ChatGPT would help me remove the redundant variables in the function. That said, its suggestions already did help with readability.
+
+# 30. Format SQL
+
+Prompt: I want you to act as a SQL formatter. Please format the following SQL code. Please convert all reserved keywords to uppercase [Insert requirements]. [Insert Code]
+
+![image](https://github.com/user-attachments/assets/7e95ace4-846e-4b33-8390-87bfe04b8b0f)
+
+The code is formatted nicely and neatly with the correct indentation and casing.
+
