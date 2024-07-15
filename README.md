@@ -197,7 +197,8 @@ Here, ChatGPT provided code that matched a regex as per requirements in Python.
 However, note that I have cherrypicked this example. Before this, I had tried asking ChatGPT to create more complex other regex patterns but it failed. It even sounded confident when it explained the regex, but the regex it produced didn’t work.
 
 
-7. Train Time Series
+## 7. Train Time Series 
+
 Prompt: I want you to act as a data scientist and code for me. I have a time series dataset [describe dataset]. Please build a machine learning model that predict [target variable]. Please use [time range] as train and [time range] as validation.
 
 ![image](https://github.com/user-attachments/assets/bff9d0b7-ae72-43a1-8c1f-d5da84de597f)
@@ -207,3 +208,127 @@ Prompt: I want you to act as a data scientist and code for me. I have a time ser
 ![image](https://github.com/user-attachments/assets/fe687970-d98d-4141-b746-dd8602f38f56)
 
 ![image](https://github.com/user-attachments/assets/ce495c7c-654a-4c1d-be28-76b030a7b23c)
+
+
+ChatGPT provided code that:
+
+- preprocessed the data using standard scaling
+- Created lag variables
+- Trained a RandomForestRegressor for the evaluation
+- Used Mean Absolute Error for evaluation
+
+Alright, here’s a controversial one. ChatGPT is not able to properly write code for time series validation.
+
+Here’s why: Without the prompt “please use data from A to B as training. Please use data from Y to Z as validation”, ChatGPT uses sklearn’s train_test_split to randomly splits the data points into train and validation. This is a huge no-no because the train_test_split function randomly splits the data with no regard for the temporal relationship between the datasets. Instead, it should have used all data points from an earlier timeframe as train and later timeframe as test.
+
+
+## 8. Address Imbalance Data
+
+Prompt: I want you to act as a coder. I have trained a machine learning model on an imbalanced dataset. The predictor variable is the column [Insert column name]. In python, how do I oversample and/or undersample my data?
+
+![image](https://github.com/user-attachments/assets/e2748f38-130d-4355-b592-5b67f629a4e9)
+
+![image](https://github.com/user-attachments/assets/029cc0a2-1dda-4cdd-970e-3dcd89fb6ca4)
+
+To undersample the majority class, you can use the RandomUnderSampler method from the imblearn library. Here is an example of how to use it:
+
+![image](https://github.com/user-attachments/assets/d85b5d28-7b4d-49ef-bb47-0be593844c1c)
+
+ChatGPT used the imblearn library to write boilerplate code that randomly under and oversamples the dataset.
+
+The code is sound, but I would nitpick on its understanding of over and undersampling.
+
+Undersampling and oversampling should only be done on the train dataset. It should not be done on the entire dataset, which includes the test dataset. Otherwise, the evaluation will be done on a resampled test set that no longer reflects the actual distribution of the real dataset.
+
+Thus, it should have attempted to split the dataset into train and test sets first, before performing the under and oversampling.
+
+## 9. Get Feature Importance
+
+Prompt: I want you to act as a data scientist and explain the model’s results. I have trained a decision tree model and I would like to find the most important features. Please write the code.
+
+![image](https://github.com/user-attachments/assets/b200edd4-7724-4919-b4f2-2db136d1519f)
+
+
+ChatGPT correctly provided the code for plotting the feature importance of a decision tree. It even ranked the feature importances from the most important to the least important. 
+
+## 10. Visualize Data with Matplotlib
+
+Prompt: I want you to act as a coder in python. I have a dataset [name] with columns [name]. [Describe graph requirements]
+
+
+![image](https://github.com/user-attachments/assets/50246028-289f-4935-bde1-52b277cf5e7b)
+
+![image](https://github.com/user-attachments/assets/16c9c541-0fb8-4407-a19d-bb9f6fd7ee8c)
+
+![image](https://github.com/user-attachments/assets/c7cd51d1-1f18-4350-b5c3-2e389edd94ac)
+
+
+
+ChatGPT could provide the correct code for plotting visualizations in Matplotlib.
+
+I am particularly impressed because I provided very long and rather convoluted instructions, and ChatGPT followed them to a tee. Here is the output from the code:
+
+![image](https://github.com/user-attachments/assets/7e54e432-1bfa-4204-a3ff-5ab198d7c76c)
+
+## 11. Visualize Image Grid Matplotlib
+
+Prompt: I want you to act as a coder. I have a folder of images. [Describe how files are organised in directory] [Describe how you want images to be printed]
+
+![image](https://github.com/user-attachments/assets/5638edd1-a4cf-4c86-ac75-71a12efba812)
+
+![image](https://github.com/user-attachments/assets/548a5025-a396-4597-9409-20609acc6dbe)
+
+![image](https://github.com/user-attachments/assets/b83e8c5c-66f6-4037-9c27-447d96960c01)
+
+![image](https://github.com/user-attachments/assets/6735df3b-c8e3-4081-a83f-6990e21860e4)
+
+
+Again, ChatGPT can provide the correct code for plotting grid of images with Matplotlib.
+
+Again, I provided convoluted and long instructions, but ChatGPT could follow them to a tee. (I personally loathe creating charts with Matplotlib. It is extremely flexible but writing code in it is rather painful.)
+
+
+## 12. Explain Model with Lime
+
+Prompt: I want you to act as a data scientist and explain the model’s results. I have trained a [library name] model and I would like to explain the output using LIME. Please write the code.
+
+![image](https://github.com/user-attachments/assets/e8267dd4-7ee9-4655-96c6-84899d6b28ee)
+
+![image](https://github.com/user-attachments/assets/49d45dfa-4fba-4aa0-abb3-4ee8456ba42d)
+
+
+ChatGPT provided code for explaining the model with LimeTabularExplainer and explained an instance with the correct commands.
+
+Personally, I find this helpful because I do not need to refer to the documentations for the boilerplate code. Overall, ChatGPT provided accurate code that does not violate any principles.
+
+
+## 13. Explain Model with Shap
+Prompt: I want you to act as a data scientist and explain the model’s results. I have trained a scikit-learn XGBoost model and I would like to explain the output using a series of plots with Shap. Please write the code.
+
+![image](https://github.com/user-attachments/assets/125249e2-ba6f-4697-843a-8ef8208a5dd6)
+
+![image](https://github.com/user-attachments/assets/00c7d90c-2153-4f0e-9c17-6d1add6bf925)
+
+## 14. Write Multithreaded Functions
+
+Prompt: I want you to act as a coder. Can you help me parallelize this code across threads in python?
+
+![image](https://github.com/user-attachments/assets/6758dab9-19fc-4b5e-8c21-adb64f8d87fa)
+
+![image](https://github.com/user-attachments/assets/e3684b0d-8924-41f1-9806-e8e498d3d196)
+
+I’m pleasantly surprised to find that this code actually works without any modifications. I can foresee myself doing this often in the future.
+
+
+## 15. Compare Function Speed
+
+Prompt: I want you to act as a software developer. I would like to compare the efficiency of two algorithms that performs the same thing in python. Please write code that helps me run an experiment that can be repeated for 5 times. Please output the runtime and other summary statistics of the experiment. [Insert functions]
+
+![image](https://github.com/user-attachments/assets/6ab4bcb0-cd97-4287-bb30-9d2867905b25)
+
+![image](https://github.com/user-attachments/assets/5ece3d80-15fb-4278-84c3-d35ebcd43125)
+
+
+ChatGPT is able to write code that compares two function speeds with built-in packages.
+
+The code runs and is correct. Though, I would rather ChatGPT use the %%timeit magic in Python instead of writing verbose code.
