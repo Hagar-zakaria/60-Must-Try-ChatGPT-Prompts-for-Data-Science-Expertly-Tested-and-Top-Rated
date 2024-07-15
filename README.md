@@ -90,7 +90,7 @@ I Rated 60 ChatGPT Functions for Data Science: Discover These Prompts to Have Ch
   - Provide Emotional Support
 
 # WRITE PYTHON
-1. Train Classification Model
+## 1. Train Classification Model
 Prompt: I want you to act as a data scientist and code for me. I have a dataset of [describe dataset]. Please build a machine learning model that predict [target variable].
 
 ![image](https://github.com/user-attachments/assets/3c032e58-2062-415a-b7df-6cbb85bab248)
@@ -100,3 +100,32 @@ Prompt: I want you to act as a data scientist and code for me. I have a dataset 
 ![image](https://github.com/user-attachments/assets/f59c9afb-aa5e-4473-aa16-6f900c6d3955)
 
 ![image](https://github.com/user-attachments/assets/bbd7c341-7aca-48ab-bd23-ad1158b2bbac)
+
+
+ChatGPT is able to provide satisfactory code that:
+
+- provide the regular preprocessing (scaling the data and encoding categorical variable),
+- drop the testing column
+- provide the train-test split
+- evaluate the model
+  
+This is good because it provides enough code to start off a model. It is also technically sound and correct. However, it’s lacking because it only uses accuracy for evaluation.
+
+## 2. Automatic Machine Learning
+Prompt: I want you to act as an automatic machine learning (AutoML) bot using TPOT for me. I am working on a model that predicts [...]. Please write python code to find the best classification model with the highest AUC score on the test set.
+
+![image](https://github.com/user-attachments/assets/73776935-87bc-486a-9a7e-c67f3d85796a)
+
+![image](https://github.com/user-attachments/assets/f7d58423-3fea-4705-8681-8f2d4fc706f7)
+
+This Python code uses the TPOT (Tree-based Pipeline Optimization Tool) library to automate the process of finding the best machine learning model for predicting whether a person will default on a credit card loan. 
+
+
+ChatGPT provided good code (it runs!) that:
+
+- provide the train-test split
+- instantiated the AutoML classifier
+- fit it to the AutoML classifier
+- export the classifier
+  
+I’m not at all surprised that ChatGPT excels here since the code is pretty much only boilerplate code. This can be copied and pasted from the documentation as is.
