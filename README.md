@@ -1,5 +1,4 @@
-![image](https://github.com/user-attachments/assets/472254b6-b282-40d5-af8a-e4f35cc5afcc)# 60-Must-Try-ChatGPT-Prompts-for-Data-Science-Expertly-Tested-and-Top-Rated
-Streamline Your Data Science Workflow with ChatGPT Automation
+# Streamline Your Data Science Workflow with ChatGPT Automation
 
 ![image](https://github.com/user-attachments/assets/72e3694d-d4ce-4560-a252-2faae1b4ca74)
 
