@@ -1,4 +1,4 @@
-# 60-Must-Try-ChatGPT-Prompts-for-Data-Science-Expertly-Tested-and-Top-Rated
+![image](https://github.com/user-attachments/assets/472254b6-b282-40d5-af8a-e4f35cc5afcc)# 60-Must-Try-ChatGPT-Prompts-for-Data-Science-Expertly-Tested-and-Top-Rated
 Streamline Your Data Science Workflow with ChatGPT Automation
 
 ![image](https://github.com/user-attachments/assets/72e3694d-d4ce-4560-a252-2faae1b4ca74)
@@ -458,7 +458,7 @@ Prompt: I want you to act as a software developer. Please provide documentation 
 
 ChatGPT could provide a correct, nicely formatted docstring. It also provides a one-liner that captures the essence of the function (“calculates the sum of the integers”). This is neat and I foresee myself doing this a lot.
 
-# 29. Improve Readability
+## 29. Improve Readability
 
 Prompt: I want you to act as a code analyzer. Can you improve the following code for readability and maintainability? [Insert code]
 
@@ -466,7 +466,7 @@ Prompt: I want you to act as a code analyzer. Can you improve the following code
 
 I am slightly disappointed here because I had hope ChatGPT would help me remove the redundant variables in the function. That said, its suggestions already did help with readability.
 
-# 30. Format SQL
+## 30. Format SQL
 
 Prompt: I want you to act as a SQL formatter. Please format the following SQL code. Please convert all reserved keywords to uppercase [Insert requirements]. [Insert Code]
 
@@ -474,3 +474,246 @@ Prompt: I want you to act as a SQL formatter. Please format the following SQL co
 
 The code is formatted nicely and neatly with the correct indentation and casing.
 
+# TRANSLATE CODE
+
+## 31. Translate Between DBMS
+
+Prompt: I want you to act as a coder and write SQL code for MySQL. What is the equivalent of PostgreSQL’s DATE_TRUNC for MySQL?
+
+![image](https://github.com/user-attachments/assets/78392039-fb9b-4031-a620-0e7a4f65a9c9)
+
+While ChatGPT is able to translate the DATE_TRUNC function in this example, it failed on other instances. In particular, it failed to translate the Redshift’s PIVOT into a query that contains a series of CASE WHEN. Thus, this translation might work well only for simple use cases.
+
+## 32. Translate Python to R
+
+Prompt: I want you to act as a code translator. Can you please convert the following code from python to R? [Insert code]
+
+![image](https://github.com/user-attachments/assets/7a6f60f2-2fbf-45b9-ab95-2a2b966d5995)
+
+This is a correct translation! However, note that this is a very straightforward function. ChatGPT might fail on on more complex code blocks.
+
+## 33. Translate R to Python
+
+Prompt: I want you to act as a code translator. Can you please convert the following code from R to python? [Insert code]
+
+![image](https://github.com/user-attachments/assets/3ea49ed8-7eaf-42ff-8b67-5476f411328f)
+
+Again, a correct translation here. However, note that this is a very straightforward function. ChatGPT might fail on on more complex code blocks.
+
+## 34. Explain to Five-Year-Old
+
+Prompt: I want you to act as a data science instructor. Explain [concept] to a five-year-old.
+
+![image](https://github.com/user-attachments/assets/61f8a6ae-f3ed-41e5-be74-3fc5580865d0)
+
+## 35. Explain to Undergraduate
+
+Prompt: I want you to act as a data science instructor. Explain [concept] to an undergraduate.
+
+![image](https://github.com/user-attachments/assets/4b20871c-9c37-487d-86f5-18917044a39b)
+
+## 36. Explain to Professor
+
+Prompt: I want you to act as a data science instructor. Explain [concept] to a professor.
+
+![image](https://github.com/user-attachments/assets/30ce7d06-b923-4ad5-a709-b39336cba0eb)
+
+## 37. Explain to Business Stakeholder
+
+Prompt: I want you to act as a data science instructor. Explain [concept] to a business stakeholder.
+
+![image](https://github.com/user-attachments/assets/77faed77-70e4-4484-975e-0acf1fdcc6b2)
+
+## 38. Explain Like StackOverflow
+
+Prompt: I want you to act as an answerer on StackOverflow. You can provide code snippets, sample tables and outputs to support your answer. [Insert technical question]
+
+![image](https://github.com/user-attachments/assets/03748e7d-7a09-41c5-832d-2b3ba62d997e)
+
+![image](https://github.com/user-attachments/assets/a4b038d7-562a-45bc-aac3-d361c1cc28b2)
+
+## 39. Suggest Edge Cases
+
+Prompt: I want you to act as a software developer. Please help me catch edge cases for this function [insert function]
+
+![image](https://github.com/user-attachments/assets/ef11d27f-fdc1-4dba-9977-6de9019c1eef)
+
+For a relatively simple function, ChatGPT is able to correctly and exhaustively suggests the edge cases. It exhaustively considered all cases without being prompted on what the cases are.
+
+## 40. Suggest Dataset
+
+Prompt: I want you to act as a data science career coach. I want to build a predictive model for [...]. At the same time, I would like to showcase my knowledge in [...]. Can you please suggest the five most relevant datasets for my use case?
+
+![image](https://github.com/user-attachments/assets/a5be07bd-5b4b-4746-88cc-0606680d1160)
+
+
+I like ChatGPT’s dataset suggestions because they are customized to my use case. I have also tested this prompt for different personas and use cases, and the suggestions it gives are consistently excellent.
+
+
+## 41. Suggest Portfolio Ideas
+
+Prompt: I want you to act as a data science coach. My background is in [...] and I would like to [career goal]. I need to build a portfolio of data science projects that will help me land a role in [...] as a [...]. 
+
+Can you suggest five specific portfolio projects that will showcase my expertise in [...] and are of relevance to [company]?
+
+![image](https://github.com/user-attachments/assets/d079efdc-a7a8-4e56-8b9b-8226541a3ff3)
+
+This is one of my favourite prompts. Its suggestions are relevant not only to myself, but also to the industry that I am gunning for, and also for my dream company. It does not suggest any generic projects like the Titanic or Iris project. Instead, it makes salient suggestions based on its knowledge of the company (Tesla, in this case), the industry (data science), and my background in engineering.
+
+## 42. Suggest Resources
+
+Prompt: I want you to act as a data science coach. I would like to learn about [topic]. Please suggest 3 best specific resources. You can include [specify resource type]
+
+![image](https://github.com/user-attachments/assets/7df07f0b-91fc-496d-b0e2-2df80f37f78f)
+
+This one is for those looking to learn a new skill. I find that the resources that it has suggested are not only relevant, but also critically acclaimed. It also does not provide an overwhelming list of resources and instead provide only a few. I like this because it certainly provides a good starting point for anyone hunting for new resources.
+
+## 43. Suggest Time Complexity
+
+Prompt: I want you to act as a software developer. Please compare the time complexity of the two algorithms below. [Insert two functions]
+
+![image](https://github.com/user-attachments/assets/1cb17b7a-0b01-41ac-818a-78294366e20b)
+
+## 44. Suggest Feature Engineering
+
+Prompt: I want you to act as a data scientist and perform feature engineering. I am working on a model that predicts [insert feature name]. There are columns: [Describe columns]. Can you suggest features that we can engineer for this machine learning problem?
+
+![image](https://github.com/user-attachments/assets/9663bc6f-db7c-496e-a5e1-38bc19d8dd1d)
+
+I absolutely loved ChatGPT’s reponse here. The features it suggested are sound and actually useful for the use case.
+
+## 45. Suggest A/B Testing Steps
+
+Prompt: I want you to act as a statistician. [Describe context] Please design an A/B test for this purpose. Please include the concrete steps on which statistical test I should run.
+
+![image](https://github.com/user-attachments/assets/d3afed30-34a7-4ab2-abfc-f76201565f65)
+
+![image](https://github.com/user-attachments/assets/af6cbd46-2e0b-4922-8e77-a8b52dbc21b9)
+
+## 46. Career Coaching
+
+Prompt: I want you to act as a career advisor. I am looking for a role as a [role name]. My background is [...]. How do I land the role and with what resources exactly in 6 months?
+
+![image](https://github.com/user-attachments/assets/2ca21f97-33d6-466f-8525-b9e5914f6028)
+
+I have no surprises that ChatGPT did well here. It is able to regurgigate oft-repeated advice for career changers. While this is technically correct, I didn’t find it overwhelming impressive.
+
+# TROUBLESHOOT PROBLEM
+
+## 47. Correct Own ChatGPT Code
+
+Prompt: Your above code is wrong. [Point out what is wrong]. Can you try again?
+
+![image](https://github.com/user-attachments/assets/8a11654e-4e39-42a2-ba8e-8957f4086e8b)
+
+![image](https://github.com/user-attachments/assets/25005f25-6230-4403-b432-634c0ab02e23)
+
+ChatGPT is quick to admit its mistakes and correct its code. In the above example, I asked ChatGPT to create a shell command. I realized that it does not actually run, so I pointed out what was wrong. ChatGPT is able to provide the correct code on the second attempt.
+
+## 48. Correct Python Code
+
+Prompt: I want you to act as a software developer. This code is supposed to [expected function]. Please help me debug this python code that cannot be run. [Insert function]
+
+![image](https://github.com/user-attachments/assets/7ac4f894-2041-416c-9e93-cd2e501a4c0c)
+
+I provided ChatGPT with a simple incorrect function and it is able to tell me why it is wrong correctly.
+
+## 49. Correct SQL Code
+
+Prompt: I want you to act as a SQL code corrector. This code does not run in [your DBMS, e.g. PostgreSQL]. Can you correct it for me? [SQL code here]
+
+![image](https://github.com/user-attachments/assets/239dfa46-2848-414c-8b64-48f98140f3a4)
+
+## 50. Troubleshoot PowerBI Model
+
+Prompt: I want you to act as a PowerBl modeler. Here is the details of my current project. [Insert details]. Do you see any problems with the table?
+
+
+![image](https://github.com/user-attachments/assets/af46220c-850f-4218-9764-f9e4c6cffafe)
+
+![image](https://github.com/user-attachments/assets/fcf60e7f-30c3-4f1f-967e-e0310fc8a161)
+
+
+ChatGPT is able to suggest relevant improvements to the PowerBI model. It also admitted its shortcoming (“It’s difficult to determine if there are any problems without more context”)
+
+# WRITE SQL
+
+## 51. Create Running Average
+
+Prompt: I want you to act as a data scientist and write SQL code for me. I have a table with two columns [Insert column names]. I would like to calculate a running average for [which value]. What is the SQL code that works for PostgreSQL 14?
+
+![image](https://github.com/user-attachments/assets/504885d3-9332-49ac-951f-d814a0436733)
+
+![image](https://github.com/user-attachments/assets/81433daf-0cd7-4e2a-80df-f53c49451088)
+
+ChatGPT did provide a good response to the requesst here! It correctly provided the output for creating running averages in SQL. It also provided a correct explanation and breakdown.
+
+## 52. Solve Leetcode Question
+
+Prompt: Assume you are given the tables… with the columns… Output the following…
+
+![image](https://github.com/user-attachments/assets/51dee941-b20f-4321-a697-de32fcf7c615)
+
+
+# WRITE OTHER CODE
+
+## 53. Write Google Sheets Formula
+
+Prompt: I want you to act as a bot that generates Google Sheets formula. Please generate a formula that [describe requirements]
+
+![image](https://github.com/user-attachments/assets/9d48fee7-d251-4e82-ac52-c44b0010db20)
+
+![image](https://github.com/user-attachments/assets/f925ddd9-a241-4a7e-9b55-363f731e7ac5)
+
+ChatGPT excels at acting as a lookup table for all commands. As you can see, I asked it for a function that pulls one sheet and puts it into another. It faithfully provided the correct importrange.
+
+However, again, I cherrypicked this example. ChatGPT fails when asked to provide more complex formulas. In particular, I asked it to provide a formula that outputs the number of Mondays in 2023. It failed to produce a formula that works. Yet, it still confidently explained it as though it performed splendidly.
+
+
+## 54. Write R
+
+Prompt: I want you to act as a data scientist using R. Can you write an R script that [Insert requirement here]
+
+![image](https://github.com/user-attachments/assets/8fb789da-db5f-49d6-b20e-38acaa964c11)
+
+ChatGPT sure excelled at this basic R command. This code runs and indeed creates the plot as requested.
+
+However, do note that I did not test ChatGPT on R coding extensively. I can imagine it failing or producing incorrect codes for more complex cases.
+
+## 55. Write Shell
+
+Prompt: I want you to act as a Linux terminal expert. Please write the code to [describe requirements]
+
+![image](https://github.com/user-attachments/assets/753f8a48-ef60-4592-b7fc-d2fcb3825b86)
+
+## 56. Write VBA
+
+Prompt: I want you to act as an Excel VBA developer. Can you write a VBA that [Insert function here]?
+
+![image](https://github.com/user-attachments/assets/4615fdf3-3b02-4ce5-84c5-8850f146c955)
+
+# MISCALLANEOUS
+
+## 57. Format Tables
+
+Prompt: I want you to act as a document formatter. Please format the following into a nice table for me to place in Google Docs? [insert text table here]
+
+![image](https://github.com/user-attachments/assets/aad9c3fa-51ff-4719-85a1-ca63a5b8de66)
+
+## 58. Summarize Book
+
+Prompt: I want you to act as a technical book summarizer. Can you please summarize the book [name] with 5 main points?
+
+![image](https://github.com/user-attachments/assets/c92b4d60-637a-40ae-8f7f-d6232f70a758)
+
+## 59. Summarize Paper
+
+Prompt: I want you to act as an academic. Please summarise the paper [...] in simple terms in one paragraph.
+
+![image](https://github.com/user-attachments/assets/92bb4f76-6d97-4227-8da2-3a579220008b)
+
+60. Provide Emotional Support (My Favourite)
+    
+Prompt: I want you to provide emotional support to me. [Explain problem here.]
+
+![image](https://github.com/user-attachments/assets/0a9375ea-b3ad-419d-acbb-81304b996b8d)
